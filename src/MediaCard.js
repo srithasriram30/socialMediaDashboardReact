@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './MediaCard.css'
 
 class MediaCard extends Component {
     constructor(props) {
@@ -6,20 +7,20 @@ class MediaCard extends Component {
         this.state = {
             logo: '',
             username: '',
-            numFollowers: 0,
-            change: 0
+            numFollowers: '',
+            change: ''
         }
     }
     render() {
-        let imgSrc = `images/icon-facebook.svg`;
-        console.log(imgSrc);
+        let imgSrc = `images/icon-${this.props.logo}.svg`;
+        let altText = `${this.props.logo} icon`
         return (
-            <div>
+            <div className="card">
                 <p>
-                    <img src="../images/icon-facebook.svg" alt="facebook icon"/>
+                    <img src={imgSrc} alt={altText} />
                     {this.props.username}
                 </p>
-                <p>{this.props.numFollowers}</p>
+                <p className="followers">{this.props.numFollowers}</p>
                 <p>followers</p>
                 <p>{this.props.change} today</p>
             </div>

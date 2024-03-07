@@ -1,0 +1,9 @@
+.card {
+    background-color: hsl(228, 28%, 20%);
+    color: white;
+    padding: 1rem 3rem;
+}
+
+.followers {
+    font-size: xx-large;
+}
